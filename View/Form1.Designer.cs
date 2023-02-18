@@ -1,4 +1,6 @@
-﻿namespace AzureFileManager
+﻿using System;
+
+namespace AzureFileManager
 {
     partial class Form1
     {
@@ -37,11 +39,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnShowOne = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnShowAll = new System.Windows.Forms.Button();
             this.btnDownload = new System.Windows.Forms.Button();
+            this.btnUpload = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
@@ -154,87 +156,92 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(27)))), ((int)(((byte)(128)))));
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnShowOne);
+            this.panel2.Controls.Add(this.btnDelete);
+            this.panel2.Controls.Add(this.btnShowAll);
             this.panel2.Controls.Add(this.btnDownload);
+            this.panel2.Controls.Add(this.btnUpload);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 481);
             this.panel2.TabIndex = 1;
             // 
-            // button5
+            // btnShowOne
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(97)))), ((int)(((byte)(197)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(4, 230);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(191, 49);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "File One Show";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnShowOne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(97)))), ((int)(((byte)(197)))));
+            this.btnShowOne.FlatAppearance.BorderSize = 0;
+            this.btnShowOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowOne.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnShowOne.ForeColor = System.Drawing.Color.White;
+            this.btnShowOne.Location = new System.Drawing.Point(4, 230);
+            this.btnShowOne.Name = "btnShowOne";
+            this.btnShowOne.Size = new System.Drawing.Size(191, 49);
+            this.btnShowOne.TabIndex = 4;
+            this.btnShowOne.Text = "File Show One";
+            this.btnShowOne.UseVisualStyleBackColor = false;
+            this.btnShowOne.Click += new System.EventHandler(this.btnShowOne_Click);
             // 
-            // button4
+            // btnDelete
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(97)))), ((int)(((byte)(197)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(4, 118);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(191, 49);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(97)))), ((int)(((byte)(197)))));
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(4, 118);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(191, 49);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // button3
+            // btnShowAll
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(97)))), ((int)(((byte)(197)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(4, 174);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(191, 49);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "File All Show";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(97)))), ((int)(((byte)(197)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(4, 62);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(191, 49);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Upload";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnShowAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(97)))), ((int)(((byte)(197)))));
+            this.btnShowAll.FlatAppearance.BorderSize = 0;
+            this.btnShowAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowAll.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnShowAll.ForeColor = System.Drawing.Color.White;
+            this.btnShowAll.Location = new System.Drawing.Point(4, 174);
+            this.btnShowAll.Name = "btnShowAll";
+            this.btnShowAll.Size = new System.Drawing.Size(191, 49);
+            this.btnShowAll.TabIndex = 2;
+            this.btnShowAll.Text = "File All Show";
+            this.btnShowAll.UseVisualStyleBackColor = false;
+            this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
             // 
             // btnDownload
             // 
             this.btnDownload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(97)))), ((int)(((byte)(197)))));
-            this.btnDownload.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDownload.FlatAppearance.BorderSize = 0;
             this.btnDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDownload.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnDownload.ForeColor = System.Drawing.Color.White;
-            this.btnDownload.Location = new System.Drawing.Point(4, 6);
+            this.btnDownload.Location = new System.Drawing.Point(4, 62);
             this.btnDownload.Name = "btnDownload";
             this.btnDownload.Size = new System.Drawing.Size(191, 49);
-            this.btnDownload.TabIndex = 0;
-            this.btnDownload.Text = "Download";
+            this.btnDownload.TabIndex = 1;
+            this.btnDownload.Text = "Download from Azure";
             this.btnDownload.UseVisualStyleBackColor = false;
+            this.btnDownload.Click += new System.EventHandler(this.btnDownload_Click_1);
+            // 
+            // btnUpload
+            // 
+            this.btnUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(97)))), ((int)(((byte)(197)))));
+            this.btnUpload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpload.FlatAppearance.BorderSize = 0;
+            this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpload.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnUpload.ForeColor = System.Drawing.Color.White;
+            this.btnUpload.Location = new System.Drawing.Point(4, 6);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(191, 49);
+            this.btnUpload.TabIndex = 0;
+            this.btnUpload.Text = "Upload to Azure";
+            this.btnUpload.UseVisualStyleBackColor = false;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // listBox1
             // 
@@ -243,18 +250,20 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(200, 100);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(229, 481);
+            this.listBox1.Size = new System.Drawing.Size(282, 481);
             this.listBox1.TabIndex = 2;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // listBox2
             // 
             this.listBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(213)))), ((int)(((byte)(253)))));
             this.listBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(429, 100);
+            this.listBox2.Location = new System.Drawing.Point(482, 100);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(655, 481);
+            this.listBox2.Size = new System.Drawing.Size(602, 481);
             this.listBox2.TabIndex = 3;
+           
             // 
             // Form1
             // 
@@ -287,11 +296,11 @@
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnShowOne;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnShowAll;
         private System.Windows.Forms.Button btnDownload;
+        private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.Button btnMinSize;
         private System.Windows.Forms.Button btnMaxiSize;
         private System.Windows.Forms.Button btnClose;
