@@ -67,7 +67,7 @@ namespace AzureFileManager.Models
         }
         public void DeleteFile()
         {
-            _container.GetBlobClient(SelectedItem).DeleteIfExists(); ;
+            _container.GetBlobClient(SelectedItem).DeleteIfExists(); 
             GetAllFiles();
         }
         public void DownloadFile()
@@ -86,9 +86,9 @@ namespace AzureFileManager.Models
         {
             if (_searchInputText != "")
             {
-                List<string> tmpList = new List<string>(files);
+                List<string> strList = new List<string>(files);
                 files.Clear();
-                foreach (string item in tmpList)
+                foreach (string item in strList)
                 {
                     if (item.StartsWith(_searchInputText))
                     {

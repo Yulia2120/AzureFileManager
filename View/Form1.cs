@@ -55,17 +55,17 @@ namespace AzureFileManager
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            fileManager.DeleteFile();
+
         }
 
         private void btnDownload_Click_1(object sender, EventArgs e)
         {
-            fileManager.DownloadFile();
+            
         }
 
         private void btnShowOne_Click(object sender, EventArgs e)
         {
-            fileManager.GetFileText();
+           
             
 
         }
