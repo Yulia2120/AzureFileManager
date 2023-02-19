@@ -65,7 +65,7 @@ namespace AzureFileManager
 
         private void btnShowOne_Click(object sender, EventArgs e)
         {
-            //fileManager.GetFileText();
+            fileManager.GetFileText();
             
 
         }
@@ -73,7 +73,7 @@ namespace AzureFileManager
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             listBox1.SelectedItem = fileManager.GetFileText();
-            listBox2.Items.Add(listBox1.SelectedItems);
+            listBox2.Items.Add(listBox1.SelectedItem);
         }
 
     }

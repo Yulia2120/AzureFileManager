@@ -21,7 +21,6 @@ namespace AzureFileManager.Models
 
         private List<string> files = new List<string>();
         public List<string> filesCollection;
-        //private string _requestResult;
         private string _searchInputText;
         private string _fileText;
 
